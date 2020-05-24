@@ -5,12 +5,10 @@ fitty('#main-headline');
 let bottomGradient = document.querySelector('.bottom-gradient');
 let activePoint = bottomGradient.clientHeight;
 
-function activatesGradient() {
+window.addEventListener('scroll', () => {
     if(window.scrollY >= activePoint) {
         bottomGradient.style.opacity = '1'
     } else {
         bottomGradient.style.opacity = '0'
     }
-}
-
-window.addEventListener('scroll', activatesGradient);
+})
