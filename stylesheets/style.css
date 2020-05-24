@@ -85,4 +85,7 @@ main .content-wrap {
 /* --- Text-Styling --- */
 main p {
     font-size: 6.5rem;
+    line-height: 7.5rem;
+
+    margin: 3.25rem 0;
 }
