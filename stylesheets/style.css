@@ -81,3 +81,8 @@ main .content-wrap {
 
     margin: 0 auto;
 }
+
+/* --- Text-Styling --- */
+main p {
+    font-size: 6.5rem;
+}
