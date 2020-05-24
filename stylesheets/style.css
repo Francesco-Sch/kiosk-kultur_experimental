@@ -111,3 +111,23 @@ main p {
 main span {
     color: rgba(255, 255, 255, 0.1);
 }
+
+
+/* ----- Bottom-Gradient ----- */
+.bottom-gradient {
+    opacity: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+    height: 250px;
+
+    background-image: -webkit-linear-gradient(bottom, black, transparent 90%);;
+    background-image: -moz-linear-gradient(bottom, black, transparent 90%);
+    background-image: -o-linear-gradient(bottom, black, transparent 90%);
+    background-image: linear-gradient(to top, black, transparent 90%);
+
+    transition: all .5s;
+}
