@@ -59,6 +59,17 @@ header #documentary {
     grid-column: 1/6;
     grid-row: 2/3 ;
 }
+header svg {
+    width: 50px;
+    height: 1px;
+
+    margin-right: 2%;
+    margin-bottom: .5%;
+}
+header svg line {
+    stroke: white;
+    stroke-width: 1px;
+}
 header #date {
     grid-column: 6/11;
     grid-row: 2/3;
