@@ -88,6 +88,19 @@ main .content-wrap {
     margin: 0 auto;
 }
 
+/* --- Gradient between header and content --- */
+main #gradient {
+    width: 100%;
+    height: 450px;
+
+    margin-top: -450px;
+
+    background-image: -webkit-linear-gradient(bottom, black, transparent 90%);;
+    background-image: -moz-linear-gradient(bottom, black, transparent 90%);
+    background-image: -o-linear-gradient(bottom, black, transparent 90%);
+    background-image: linear-gradient(to top, black, transparent 90%);
+}
+
 /* --- Text-Styling --- */
 main p {
     font-size: 6.5rem;
