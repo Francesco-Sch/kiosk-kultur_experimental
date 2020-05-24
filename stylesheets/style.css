@@ -38,3 +38,8 @@ header .content-wrap {
 
     margin: 0 auto;
 }
+
+/* --- Typographic Styling --- */
+p {
+    font-size: 1rem;
+}
