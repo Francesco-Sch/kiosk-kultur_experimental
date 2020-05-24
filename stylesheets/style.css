@@ -73,3 +73,11 @@ header #scroll-down {
     grid-column: 1/6;
     grid-row: 11/12;
 }
+
+/* ----- Content-Styling ----- */
+main .content-wrap {
+    width: 95%;
+    height: 100%;
+
+    margin: 0 auto;
+}
