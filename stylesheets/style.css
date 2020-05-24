@@ -23,6 +23,11 @@ p {
     font-size: 6.5rem;
 }
 
+/* --- Automatic Fit --- */
+.fit {
+    display: inline-block;
+    white-space: nowrap;
+}
 /* ----- Header-Styling ----- */
 header {
     width: 100%;
@@ -53,7 +58,7 @@ header #time {
     grid-column: 6/11;
     grid-row: 2/3;
 }
-header h1 {
+header .fit {
     grid-column: 1/11;
     grid-row: 6/9;
 }
