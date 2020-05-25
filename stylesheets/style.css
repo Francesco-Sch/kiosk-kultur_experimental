@@ -76,7 +76,7 @@ header #date {
 
     text-align: right;
 }
-header .fit {
+header .headline-fit {
     grid-column: 1/11;
     grid-row: 4/8;
 
@@ -85,6 +85,13 @@ header .fit {
     -webkit-background-clip: text;
     background-size: cover;
     color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header #main-headline {
+    font-size: 14.3vw;
 }
 header #scroll-down {
     grid-column: 1/6;
