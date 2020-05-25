@@ -21,6 +21,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 p {
     font-size: 6.5rem;
+    line-height: 7.5rem;
 }
 
 /* --- Automatic Fit --- */
@@ -164,9 +165,6 @@ main #gradient {
 
 /* --- Text-Styling --- */
 main p {
-    font-size: 6.5rem;
-    line-height: 7.5rem;
-
     margin: 3.25rem 0;
 }
 main span {
