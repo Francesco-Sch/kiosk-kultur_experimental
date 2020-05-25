@@ -85,6 +85,7 @@ header .headline-fit {
     -webkit-background-clip: text;
     background-size: cover;
     color: transparent;
+    filter: drop-shadow(0 0 0.1rem #ffffff35);
 
     display: flex;
     justify-content: center;
