@@ -1,6 +1,3 @@
-/* ----- Resizes headline equally to the parent div ----- */
-fitty('#main-headline');
-
 /* ----- Activates bottom gradient after scroll ----- */
 let bottomGradient = document.querySelector('.bottom-gradient');
 let activePoint = bottomGradient.clientHeight;
