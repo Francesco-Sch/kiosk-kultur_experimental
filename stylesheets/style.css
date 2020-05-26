@@ -171,6 +171,11 @@ main span {
     color: rgba(255, 255, 255, 0.1);
 }
 
+/* --- Image-Styling --- */
+main .tag-image {
+    display: none;
+}
+
 
 /* ----- Bottom-Gradient ----- */
 .bottom-gradient {
