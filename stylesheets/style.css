@@ -24,12 +24,6 @@ p {
     line-height: 7.5rem;
 }
 
-/* --- Automatic Fit --- */
-.fit {
-    display: inline-block;
-    white-space: nowrap;
-}
-
 /* ----- Header-Styling ----- */
 header {
     width: 100%;

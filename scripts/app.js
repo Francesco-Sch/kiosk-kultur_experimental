@@ -9,3 +9,4 @@ window.addEventListener('scroll', () => {
         bottomGradient.style.opacity = '0'
     }
 })
+
