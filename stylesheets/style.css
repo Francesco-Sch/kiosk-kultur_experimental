@@ -169,6 +169,15 @@ main span {
 main .tag-image {
     display: none;
 }
+main .show {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+
+    width: 65vw;
+    height: auto;
+}
 
 
 /* ----- Bottom-Gradient ----- */
