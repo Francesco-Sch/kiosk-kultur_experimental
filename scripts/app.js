@@ -10,6 +10,22 @@ window.addEventListener('scroll', () => {
     }
 })
 
+// Attach mouseover-div to the mouse position
+const mouseOver = document.querySelector('#mouseover');
+
+function moveDiv(event) {
+    let x = event.pageX;
+    let y = event.pageY;
+
+    mouseOver.style.left = x  + 'px';
+    mouseOver.style.top = y + 'px';
+}
+
+document.body.addEventListener('mousemove', () => {
+    moveDiv(event);
+})
+
+
 // Show image on text hover
 const imageLinks = document.querySelectorAll('.show-image');
 const images = document.querySelectorAll('.tag-image');
