@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
 })
 
 // Attach mouseover-div to the mouse position
-const mouseOver = document.querySelector('#mouseover');
+const mouseOver = document.querySelector('.mouseover');
 
 function moveDiv(event) {
     let x = event.pageX;
@@ -32,12 +32,14 @@ const root = location.protocol + '//' + location.host;
 
 console.log(imageLinks);
 
-imageLinks.forEach((item, index) => {
+imageLinks.forEach((item) => {
         item.addEventListener('mouseenter', () => {
             mouseOver.style.backgroundImage = `url(${root + item.dataset.image})`;
+            mouseOver.classList.add("show");
         }),
         item.addEventListener('mouseout', () => {
             mouseOver.style.backgroundImage = 'none';
+            mouseOver.classList.remove("show");
         })
     }
 )
