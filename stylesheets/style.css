@@ -179,6 +179,13 @@ main .show {
     height: auto;
 }
 
+/* --- Mouse-Over-Div --- */
+#mouseover {
+    background-color: blue;
+    width: 400px;
+    height: 300px;
+}
+
 
 /* ----- Bottom-Gradient ----- */
 .bottom-gradient {

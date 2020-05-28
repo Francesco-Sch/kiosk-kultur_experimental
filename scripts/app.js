@@ -11,8 +11,8 @@ window.addEventListener('scroll', () => {
 })
 
 // Show image on text hover
-let imageLinks = document.querySelectorAll('.show-image');
-let images = document.querySelectorAll('.tag-image');
+const imageLinks = document.querySelectorAll('.show-image');
+const images = document.querySelectorAll('.tag-image');
 
 console.log(images)
 
