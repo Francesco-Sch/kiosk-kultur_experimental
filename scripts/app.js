@@ -10,23 +10,36 @@ window.addEventListener('scroll', () => {
     }
 })
 
+
 // Attach mouseover-div to the mouse position
 const mouseOver = document.querySelector('.mouseover');
+const windowWidth = window.innerWidth;
 
 function moveDiv(event) {
     let x = event.pageX;
     let y = event.pageY;
 
-    let xPer = 15/100 * x;
-    let yPer = 15/100 * y;
+    if(x <= windowWidth/2) {
+        mouseOver.style.right = '';
+        mouseOver.style.left = x + 'px';
+        mouseOver.style.top = y + 'px';
+        mouseOver.style.transform = 'translate(-10%, -10%)';
+    } else {
+        mouseOver.style.left = '';
+        mouseOver.style.right = windowWidth - x + 'px';
+        mouseOver.style.top = y + 'px';
+        mouseOver.style.transform = 'translate(10%, -10%)';
+    }
 
-    mouseOver.style.left = x + 'px';
-    mouseOver.style.top = y + 'px';
 }
+
 
 document.body.addEventListener('mousemove', () => {
     moveDiv(event);
 })
+
+// Switches direction of the mouseover-div, depending on which side of the screen the mouse is
+
 
 
 // Show image inside the mouseover-div on text hover
