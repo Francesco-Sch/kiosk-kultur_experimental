@@ -182,8 +182,8 @@ main .show {
 /* --- Mouse-Over-Div --- */
 #mouseover {
     background-color: blue;
-    width: 400px;
-    height: 300px;
+    width: 900px;
+    height: 603px;
 
     position: absolute;
     top: 0;

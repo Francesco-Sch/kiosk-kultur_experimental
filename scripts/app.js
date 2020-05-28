@@ -26,7 +26,7 @@ document.body.addEventListener('mousemove', () => {
 })
 
 
-// Show image on text hover
+// Show image inside the mouseover-div on text hover
 const imageLinks = document.querySelectorAll('.show-image');
 const images = document.querySelectorAll('.tag-image');
 
