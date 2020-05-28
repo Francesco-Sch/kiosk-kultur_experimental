@@ -31,18 +31,10 @@ const imageLinks = document.querySelectorAll('.show-image');
 
 imageLinks.forEach((item, index) => {
         item.addEventListener('mouseenter', () => {
-            if(item.childElementCount == images[index].childElementCount) {
-                images[index].classList.add('show');
-            } else {
-                console.log('error')
-            }
+            
         }),
         item.addEventListener('mouseout', () => {
-            if(item.childElementCount == images[index].childElementCount) {
-                images[index].classList.remove('show');
-            } else {
-                console.log('error')
-            }
+            
         })
     }
 )
