@@ -160,12 +160,14 @@ main #gradient {
 /* --- Text-Styling --- */
 main p {
     margin: 3.25rem 0;
+    transition: color 1s;
 }
 main span {
     display: inline-block;
     color: #262626;
 
     position: relative;
+    transition: color 1s;
 }
 
 
