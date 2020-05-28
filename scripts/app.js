@@ -17,7 +17,10 @@ function moveDiv(event) {
     let x = event.pageX;
     let y = event.pageY;
 
-    mouseOver.style.left = x  + 'px';
+    let xPer = 15/100 * x;
+    let yPer = 15/100 * y;
+
+    mouseOver.style.left = x + 'px';
     mouseOver.style.top = y + 'px';
 }
 
@@ -34,10 +37,12 @@ console.log(imageLinks);
 
 imageLinks.forEach((item) => {
         item.addEventListener('mouseenter', () => {
+            item.style.zIndex = '5';
             mouseOver.style.backgroundImage = `url(${root + item.dataset.image})`;
             mouseOver.classList.add("show");
         }),
-        item.addEventListener('mouseout', () => {
+        item.addEventListener('mouseleave', () => {
+            item.style.zIndex = 'auto';
             mouseOver.style.backgroundImage = 'none';
             mouseOver.classList.remove("show");
         })

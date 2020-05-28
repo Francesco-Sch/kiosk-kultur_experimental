@@ -163,8 +163,11 @@ main p {
 }
 main span {
     display: inline-block;
-    color: rgba(255, 255, 255, 0.1);
+    color: #262626;
+
+    position: relative;
 }
+
 
 /* --- Mouse-Over-Div --- */
 .mouseover {
@@ -173,11 +176,12 @@ main span {
     width: 900px;
     height: 603px;
 
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
-
-    transition: opacity 0.7s;
+    transform: translate(-10%, -10%);
+    transition: opacity 1s;
 }
 .show {
     visibility: visible;
