@@ -28,13 +28,16 @@ document.body.addEventListener('mousemove', () => {
 
 // Show image inside the mouseover-div on text hover
 const imageLinks = document.querySelectorAll('.show-image');
+const root = location.protocol + '//' + location.host;
+
+console.log(imageLinks);
 
 imageLinks.forEach((item, index) => {
         item.addEventListener('mouseenter', () => {
-            
+            mouseOver.style.backgroundImage = `url(${root + item.dataset.image})`;
         }),
         item.addEventListener('mouseout', () => {
-            
+            mouseOver.style.backgroundImage = 'none';
         })
     }
 )
