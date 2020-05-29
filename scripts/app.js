@@ -10,8 +10,8 @@ window.addEventListener('scroll', () => {
     }
 })
 
+
 // Attach mouseover-div to the mouse position
-// and switches direction of the mouseover-div, depending on which side of the screen the mouse is
 const mouseOver = document.querySelector('.mouseover');
 const windowWidth = window.innerWidth;
 
@@ -33,9 +33,14 @@ function moveDiv(event) {
 
 }
 
+
 document.body.addEventListener('mousemove', () => {
     moveDiv(event);
 })
+
+// Switches direction of the mouseover-div, depending on which side of the screen the mouse is
+
+
 
 // Show image inside the mouseover-div on text hover
 // and change the color of the image links
@@ -62,8 +67,3 @@ imageLinks.forEach((item) => {
         })
     }
 )
-
-imageLinks.forEach((item) => {
-    const img = new Image();
-    img.src = item.dataset.image;
-})
