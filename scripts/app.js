@@ -19,6 +19,8 @@ function moveDiv(event) {
     let x = event.pageX;
     let y = event.pageY;
 
+    
+    // Switches direction of the mouseover-div, depending on which side of the screen the mouse is
     if(x <= windowWidth/2) {
         mouseOver.style.right = '';
         mouseOver.style.left = x + 'px';
@@ -38,9 +40,6 @@ document.body.addEventListener('mousemove', () => {
     moveDiv(event);
 })
 
-// Switches direction of the mouseover-div, depending on which side of the screen the mouse is
-
-
 
 // Show image inside the mouseover-div on text hover
 // and change the color of the image links
@@ -48,22 +47,25 @@ const imageLinks = document.querySelectorAll('.show-image');
 const text = document.getElementsByTagName('main');
 const root = location.protocol + '//' + location.host;
 
-console.log(text)
+function showPicture(item) {
+    item.style.zIndex = '5';
+    mouseOver.style.backgroundImage = `url(${root + item.dataset.image})`;
+    mouseOver.classList.add("show");
+    item.style.color = 'white'
+    text[0].style.color = '#262626'
+}
 
-imageLinks.forEach((item) => {
-        item.addEventListener('mouseenter', () => {
-            item.style.zIndex = '5';
-            mouseOver.style.backgroundImage = `url(${root + item.dataset.image})`;
-            mouseOver.classList.add("show");
-            item.style.color = 'white'
-            text[0].style.color = '#262626'
-        }),
-        item.addEventListener('mouseleave', () => {
-            item.style.zIndex = 'auto';
-            mouseOver.style.backgroundImage = 'none';
-            mouseOver.classList.remove("show");
-            item.style.color = '#262626'
-            text[0].style.color = 'white'
-        })
+function hidePicture(item) {
+    item.style.zIndex = 'auto';
+    mouseOver.style.backgroundImage = 'none';
+    mouseOver.classList.remove("show");
+    item.style.color = '#262626'
+    text[0].style.color = 'white'
+}
+
+imageLinks.forEach( (item) => {
+        item.addEventListener('mouseenter', () => {showPicture(item)}),
+        item.addEventListener('mouseleave', () => {hidePicture(item)})
     }
 )
+
