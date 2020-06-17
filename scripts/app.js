@@ -46,6 +46,7 @@ document.body.addEventListener('mousemove', () => {
 const imageLinks = document.querySelectorAll('.show-image');
 const text = document.getElementsByTagName('main');
 const root = location.protocol + '//' + location.host;
+const mq = window.matchMedia( "(max-width: 768px)" )
 
 function showPicture(item) {
     item.style.zIndex = '5';
@@ -64,8 +65,18 @@ function hidePicture(item) {
 }
 
 imageLinks.forEach( (item) => {
-        item.addEventListener('mouseenter', () => {showPicture(item)}),
-        item.addEventListener('mouseleave', () => {hidePicture(item)})
-    }
-)
+    item.addEventListener('mouseenter', () => {showPicture(item)}),
+    item.addEventListener('mouseleave', () => {hidePicture(item)})
+
+    // if(mq.matches) {
+    //     item.addEventListener('click', () => {showPicture(item)})
+    //     console.log(mouseOver.classList.contains("show"))
+    //     if(mouseOver.classList.contains("show") === true) {
+    //         window.addEventListener('click', () => {hidePicture(item)})
+    //     }
+    // } else {
+    //     item.addEventListener('mouseenter', () => {showPicture(item)}),
+    //     item.addEventListener('mouseleave', () => {hidePicture(item)})
+    // } 
+})
 
