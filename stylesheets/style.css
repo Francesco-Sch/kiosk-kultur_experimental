@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 p {
     font-size: 6.5rem;
-    line-height: 7.5rem;
+    line-height: 1.5rem;
 }
 
 /* ----- Header-Styling ----- */
@@ -163,6 +163,8 @@ main #gradient {
 main p {
     margin: 3.25rem 0;
     transition: color 1s;
+
+    line-height: 7.5rem;
 }
 main span {
     display: inline-block;
