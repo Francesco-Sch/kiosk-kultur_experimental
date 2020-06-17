@@ -177,8 +177,8 @@ main span {
 .mouseover {  
     visibility: hidden;
     opacity: 0;
-    width: 900px;
-    height: 603px;
+    width: 60vw;
+    height: 40vw;
 
     background-size: cover;
 
