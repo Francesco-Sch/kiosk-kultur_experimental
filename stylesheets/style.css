@@ -214,6 +214,11 @@ main span {
 
 /* --- Responsive 01 (Width: 767px) --- */
 @media only screen and (max-width: 767px) {
+
+    /* ----- Global-Styling ----- */
+    html {
+        overflow-x: hidden;
+    }
     
     /* --- Text-Styling --- */
     main p {
