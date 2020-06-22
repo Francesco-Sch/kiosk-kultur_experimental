@@ -64,19 +64,34 @@ function hidePicture(item) {
     text[0].style.color = 'white'
 }
 
-imageLinks.forEach( (item) => {
-    item.addEventListener('mouseenter', () => {showPicture(item)}),
-    item.addEventListener('mouseleave', () => {hidePicture(item)})
+if(mq.matches) {
 
-    // if(mq.matches) {
-    //     item.addEventListener('click', () => {showPicture(item)})
-    //     console.log(mouseOver.classList.contains("show"))
-    //     if(mouseOver.classList.contains("show") === true) {
-    //         window.addEventListener('click', () => {hidePicture(item)})
-    //     }
-    // } else {
-    //     item.addEventListener('mouseenter', () => {showPicture(item)}),
-    //     item.addEventListener('mouseleave', () => {hidePicture(item)})
-    // } 
-})
+    document.body.addEventListener('click', (event) => {
+        let clickedOutside = true;
+        
+        event.composedPath().forEach( (item) => {
+            if(!clickedOutside) {
+                return
+            }
+            
+            if(item.className === 'show-image') {
+                clickedOutside = false;
+                showPicture(item)
+            }
+        });
 
+        if(clickedOutside) {
+            imageLinks.forEach ( (item) => {
+                hidePicture(item)
+            })
+        }
+    })
+
+} else {
+
+    imageLinks.forEach( (item) => {
+        item.addEventListener('mouseenter', () => {showPicture(item)}),
+        item.addEventListener('mouseleave', () => {hidePicture(item)})
+    })
+
+}
