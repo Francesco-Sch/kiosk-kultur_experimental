@@ -153,6 +153,23 @@ main .content-wrap {
     margin: 0 auto;
 }
 
+/* --- Preloading-images --- */ 
+.preload-images {
+    display: none; 
+    width: 0;
+    height: 0;
+    background: url(../assets/angestellte.jpg),
+                url(../assets/aula-platz.jpg),
+                url(../assets/behaglicher.jpg),
+                url(../assets/foto.jpg),
+                url(../assets/geburtstagkind.jpg),
+                url(../assets/gruppe.jpg),
+                url(../assets/Passage.jpg),
+                url(../assets/spaeti-besitzer.jpg),
+                url(../assets/spielten.jpg),
+                url(../assets/versammelt.jpg)
+  }
+
 /* --- Gradient between header and content --- */
 main #gradient {
     width: 100%;
