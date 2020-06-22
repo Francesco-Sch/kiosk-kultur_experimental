@@ -94,6 +94,13 @@ header #main-headline {
 header #scroll-down {
     grid-column: 1/6;
     grid-row: 11/12;
+    z-index: 11;
+
+    color: white;
+    text-decoration: none;
+}
+header #scroll-down:hover { 
+    text-decoration: underline;
 }
 
 /* ----- Responsive - Header-Styling ----- */
@@ -102,7 +109,7 @@ header #scroll-down {
 @media only screen and (max-width: 767px) {
 
     /* --- Typographic Styling --- */
-    header p {
+    header p, header a {
         font-size: .75rem;
     }
 
