@@ -36,9 +36,7 @@ function moveDiv(event) {
 }
 
 
-document.body.addEventListener('mousemove', () => {
-    moveDiv(event);
-})
+document.body.addEventListener('mousemove', moveDiv)
 
 
 // Show image inside the mouseover-div on text hover
@@ -85,6 +83,8 @@ if(mq.matches) {
             if(item.className === 'show-image') {
                 clickedOutside = false;
                 showPicture(item)
+
+                document.body.removeEventListener('mousemove', moveDiv)
             }
 
             if(item.className === 'mouseover show') {
@@ -96,6 +96,8 @@ if(mq.matches) {
         if(clickedOutside) {
             imageLinks.forEach ( (item) => {
                 hidePicture(item)
+
+                document.body.addEventListener('mousemove', moveDiv)
             })
         }
     })

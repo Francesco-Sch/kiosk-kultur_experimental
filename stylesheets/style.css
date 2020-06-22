@@ -222,7 +222,7 @@ main span {
 
     /* --- Mouse-Over-Div --- */
     .mouseover {  
-        height: 80vw;
+        height: 50vh;
         background-position: center;
     }
 
