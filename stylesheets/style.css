@@ -242,4 +242,9 @@ main span {
         top: 50% !important;
         transform: translateY(-50%) !important;
     }
+
+    /* ----- Bottom-Gradient ----- */
+    .bottom-gradient {
+        height: 125px;
+    }
 }
