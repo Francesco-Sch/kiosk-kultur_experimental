@@ -219,4 +219,10 @@ main span {
     main p {
         font-size: 10vw;
     }
+
+    /* --- Mouse-Over-Div --- */
+    .mouseover {  
+        height: 80vw;
+        background-position: center;
+    }
 }
