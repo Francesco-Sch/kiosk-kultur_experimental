@@ -35,7 +35,6 @@ function moveDiv(event) {
 
 }
 
-
 document.body.addEventListener('mousemove', moveDiv)
 
 
@@ -46,6 +45,7 @@ const text = document.getElementsByTagName('main');
 const root = location.protocol + '//' + location.host;
 const mq = window.matchMedia( "(max-width: 768px)" )
 
+// Function to show the image
 function showPicture(item) {
     item.style.zIndex = '5';
     mouseOver.style.backgroundImage = `url(${root + item.dataset.image})`;
@@ -54,6 +54,7 @@ function showPicture(item) {
     text[0].style.color = '#262626'
 }
 
+// Function to hide the image
 function hidePicture(item) {
     item.style.zIndex = 'auto';
     mouseOver.style.backgroundImage = 'none';
@@ -63,10 +64,13 @@ function hidePicture(item) {
     text[0].style.color = 'white'
 }
 
+//Function to zoom into picture for mobile
 function zoomPicture(item) {
     item.classList.add("zoom-in");
 }
 
+// Checks if the user is on mobile or not
+// -- Mobile & Tablet
 if(mq.matches) {
 
     document.body.addEventListener('click', (event) => {
@@ -74,12 +78,13 @@ if(mq.matches) {
 
         console.log(event.composedPath())
         
+        // Checks if a word is tapped
         event.composedPath().forEach( (item) => {
             if(!clickedOutside) {
                 return
             }
-            console.log(item.className)
 
+            // Makes image visible on tap 
             if(item.className === 'show-image') {
                 clickedOutside = false;
                 showPicture(item)
@@ -87,6 +92,7 @@ if(mq.matches) {
                 document.body.removeEventListener('mousemove', moveDiv)
             }
 
+            // Sets image to fullscreen
             if(item.className === 'mouseover show') {
                 clickedOutside = false;
                 zoomPicture(item)
@@ -95,6 +101,7 @@ if(mq.matches) {
             }
         });
 
+        // Hide image on tap outside of the image
         if(clickedOutside) {
             imageLinks.forEach ( (item) => {
                 hidePicture(item)
@@ -105,8 +112,10 @@ if(mq.matches) {
         }
     })
 
+// -- Desktop
 } else {
 
+    // Shows images on hover over text
     imageLinks.forEach( (item) => {
         item.addEventListener('mouseenter', () => {showPicture(item)}),
         item.addEventListener('mouseleave', () => {hidePicture(item)})
