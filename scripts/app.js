@@ -90,6 +90,8 @@ if(mq.matches) {
             if(item.className === 'mouseover show') {
                 clickedOutside = false;
                 zoomPicture(item)
+                console.log(document.getElementsByTagName('html'))
+                document.getElementsByTagName('html')[0].style.overflowY = 'hidden';
             }
         });
 
@@ -98,6 +100,7 @@ if(mq.matches) {
                 hidePicture(item)
 
                 document.body.addEventListener('mousemove', moveDiv)
+                document.getElementsByTagName('html')[0].style.overflowY = 'auto';
             })
         }
     })

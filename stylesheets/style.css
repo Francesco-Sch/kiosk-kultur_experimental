@@ -230,7 +230,7 @@ main span {
         opacity: 1 !important;
         background-size: contain;
         background-repeat: no-repeat;
-        background-color: black;
+        background-color: #000000d6;
         overflow: -moz-hidden-unscrollable;
 
         z-index: 1000;
