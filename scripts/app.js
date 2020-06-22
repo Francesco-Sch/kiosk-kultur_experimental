@@ -60,23 +60,36 @@ function hidePicture(item) {
     item.style.zIndex = 'auto';
     mouseOver.style.backgroundImage = 'none';
     mouseOver.classList.remove("show");
+    mouseOver.classList.remove("zoom-in");
     item.style.color = '#262626'
     text[0].style.color = 'white'
+}
+
+function zoomPicture(item) {
+    item.classList.add("zoom-in");
 }
 
 if(mq.matches) {
 
     document.body.addEventListener('click', (event) => {
         let clickedOutside = true;
+
+        console.log(event.composedPath())
         
         event.composedPath().forEach( (item) => {
             if(!clickedOutside) {
                 return
             }
-            
+            console.log(item.className)
+
             if(item.className === 'show-image') {
                 clickedOutside = false;
                 showPicture(item)
+            }
+
+            if(item.className === 'mouseover show') {
+                clickedOutside = false;
+                zoomPicture(item)
             }
         });
 
