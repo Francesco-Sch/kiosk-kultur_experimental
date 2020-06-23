@@ -151,6 +151,10 @@ main .content-wrap {
     height: 100%;
 
     margin: 0 auto;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+        hyphens: auto;
 }
 
 /* --- Preloading-images --- */ 
