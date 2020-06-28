@@ -96,11 +96,17 @@ header #scroll-down {
     grid-row: 11/12;
     z-index: 11;
 
+    display: flex;
+    align-items: center;
+
     color: white;
     text-decoration: none;
 }
-header #scroll-down:hover { 
-    text-decoration: underline;
+header svg.arrow {
+    height: 15px;
+    width: 10px;
+
+    margin: 0 15px 0 0;
 }
 
 /* ----- Responsive - Header-Styling ----- */
@@ -142,6 +148,14 @@ header #scroll-down:hover {
     header #main-headline {
         font-size: 14vw;
         line-height: 14vw;
+    }
+}
+
+/* --- Responive 04 (Width: 450px) --- */
+@media only screen and (max-width: 450px) {
+
+    header svg.arrow {
+        margin: 0 5% 0 0;
     }
 }
 
