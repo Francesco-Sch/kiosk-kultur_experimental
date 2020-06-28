@@ -14,6 +14,10 @@ body {
 
     overflow-x: hidden;
 }
+::selection {
+    background-color: white;
+    color: black;
+}
 
 /* --- Typographic Styling --- */
 h1, h2, h3, h4, h5, h6, p {
@@ -114,7 +118,7 @@ header #scroll-down {
     text-decoration: none;
 }
 header svg.arrow {
-    height: 15px;
+    height: 12px;
     width: 10px;
 
     margin: 0 15px 0 0;
