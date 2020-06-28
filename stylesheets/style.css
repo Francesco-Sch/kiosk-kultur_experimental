@@ -26,6 +26,17 @@ p {
     line-height: normal;
 }
 
+/* ----- Responive - Global-Styling ----- */
+
+/* --- Responsive 01 (Width: 767px) --- */
+@media only screen and (max-width: 767px) {
+    /* ----- Global-Styling ----- */
+    html {
+        overflow-x: hidden;
+    }
+}
+
+
 /* ----- Header-Styling ----- */
 header {
     width: 100%;
@@ -206,6 +217,9 @@ main p {
     margin: 3.25rem 0;
     transition: color 1s;
 }
+main p:last-child {
+    margin-bottom: 0;
+}
 main span {
     display: inline-block;
     color: #262626;
@@ -232,6 +246,40 @@ main span {
 .show {
     visibility: visible;
     opacity: 1;
+}
+
+/* ----- Responive - Content-Styling ----- */
+
+/* --- Responsive 01 (Width: 767px) --- */
+@media only screen and (max-width: 767px) {
+
+    /* --- Text-Styling --- */
+    main p {
+        font-size: 10vw;
+    }
+
+    /* --- Mouse-Over-Div --- */
+    .mouseover {  
+        height: 50vh;
+        background-position: center;
+    }
+
+    .zoom-in {
+        opacity: 1 !important;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: #000000d6;
+        overflow: -moz-hidden-unscrollable;
+
+        z-index: 1000;
+        width: 100vw;
+        height: 100%;
+
+        position: fixed;
+        left: 0 !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
 }
 
 /* ----- Footer-Styling ----- */
@@ -261,6 +309,22 @@ footer p {
     font-size: 1rem;
 }
 
+/* ----- Responive - Footer-Styling ----- */
+
+/* --- Responsive 01 (Width: 767px) --- */
+@media only screen and (max-width: 767px) {
+    
+    footer .content-wrap {
+        padding: 35px 0;
+    }
+
+    /* --- Text-Styling --- */
+    footer p {
+     font-size: .75rem;
+    }
+    
+}
+
 
 /* ----- Bottom-Gradient ----- */
 .bottom-gradient {
@@ -281,41 +345,10 @@ footer p {
     transition: all .5s;
 }
 
+/* ----- Responive - Bottom-Gradient ----- */
+
 /* --- Responsive 01 (Width: 767px) --- */
 @media only screen and (max-width: 767px) {
-
-    /* ----- Global-Styling ----- */
-    html {
-        overflow-x: hidden;
-    }
-    
-    /* --- Text-Styling --- */
-    main p {
-        font-size: 10vw;
-    }
-
-    /* --- Mouse-Over-Div --- */
-    .mouseover {  
-        height: 50vh;
-        background-position: center;
-    }
-
-    .zoom-in {
-        opacity: 1 !important;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: #000000d6;
-        overflow: -moz-hidden-unscrollable;
-
-        z-index: 1000;
-        width: 100vw;
-        height: 100%;
-
-        position: fixed;
-        left: 0 !important;
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-    }
 
     /* ----- Bottom-Gradient ----- */
     .bottom-gradient {
