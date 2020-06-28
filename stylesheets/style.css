@@ -234,6 +234,33 @@ main span {
     opacity: 1;
 }
 
+/* ----- Footer-Styling ----- */
+footer {
+    position: relative;
+    z-index: 15;
+}
+
+footer .content-wrap {
+    display: flex;
+    justify-content: space-between;
+    z-index: 15;
+
+    width: 95%;
+    height: 100%;
+
+    margin: 0 auto;
+    padding: 75px 0;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+        hyphens: auto;
+}
+
+/* --- Text-Styling --- */
+footer p {
+    font-size: 1rem;
+}
+
 
 /* ----- Bottom-Gradient ----- */
 .bottom-gradient {
