@@ -91,13 +91,8 @@ header #date {
 header .headline-fit {
     grid-column: 1/11;
     grid-row: 4/8;
-
-    background-image: url(../assets/header-text-bg.jpg);
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-size: cover;
+    
     color: transparent;
-    filter: drop-shadow(0 0 0.1rem #ffffff35);
 
     display: flex;
     justify-content: center;
@@ -105,6 +100,8 @@ header .headline-fit {
 }
 header #main-headline {
     font-size: 14.3vw;
+
+    -webkit-text-stroke: 1px white;
 }
 header #scroll-down {
     grid-column: 1/6;
@@ -184,6 +181,8 @@ main .content-wrap {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
         hyphens: auto;
+
+    cursor: default;
 }
 
 /* --- Preloading-images --- */ 
