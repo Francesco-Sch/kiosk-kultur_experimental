@@ -100,7 +100,7 @@ header .headline-fit {
 }
 header #main-headline {
     font-size: 14.3vw;
-
+    color: transparent;
     -webkit-text-stroke: 1px white;
 }
 header #scroll-down {
