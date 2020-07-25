@@ -48,7 +48,11 @@ const mq = window.matchMedia( "(max-width: 768px)" )
 // Function to show the image
 function showPicture(item) {
     item.style.zIndex = '5';
+<<<<<<< HEAD
     mouseOver.style.backgroundImage = `url('${'..' + item.dataset.image}')`;
+=======
+    mouseOver.style.backgroundImage = `url(${window.location.href + item.dataset.image})`;
+>>>>>>> d4b020e44363ae7caad9a7258550fbc963ed2f52
     mouseOver.classList.add("show");
     item.style.color = 'white'
     text[0].style.color = '#262626'
