@@ -48,7 +48,7 @@ const mq = window.matchMedia( "(max-width: 768px)" )
 // Function to show the image
 function showPicture(item) {
     item.style.zIndex = '5';
-    mouseOver.style.backgroundImage = `url(${item.dataset.image})`;
+    mouseOver.style.backgroundImage = `url(${'/kiosk-kultur' + item.dataset.image})`;
     mouseOver.classList.add("show");
     item.style.color = 'white'
     text[0].style.color = '#262626'
