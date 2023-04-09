@@ -21,4 +21,9 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
         server-dir: /archive/kiosk-kultur-experimental/
-        exclude: README.md
+        dry-run: true
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          README.md
