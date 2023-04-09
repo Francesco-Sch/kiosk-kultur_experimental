@@ -21,4 +21,4 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
         dry-run: true
-        server-dir: /www/francesco-scheffczyk/archive/kiosk-kultur-experimental/
+        server-dir: /archive/kiosk-kultur-experimental/
